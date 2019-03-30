@@ -6,6 +6,9 @@ CXX=g++
 
 main:$(OBJS)
 	$(CXX) -o $@ $^
+	@echo "Makefile is done !!!!!!!!!!!"
+	@echo $(PROJECT_ROOT)
+	@echo "============================"
 
 clean:
 	rm -rf *.o core *.core main
