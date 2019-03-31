@@ -10,6 +10,7 @@ Graph::Graph(uint32_t numVertices)
 
 Graph::~Graph(void)
 {
+    std::cout << "Destructor Graph is called" <<std::endl;
     if (adjacencyList != NULL)
     {
         delete [] adjacencyList;
@@ -106,12 +107,12 @@ void Graph::printAdjMatrixOfGraph(void)
 
     for(int verIndex = 0; verIndex < (int)numVertices; verIndex++)
     {
-        std::cout << "| ";
+        std::cout << "[\t";
         for (auto itr : adjMatrix[verIndex])
         {
-            std::cout << itr.weight << " ";
+            std::cout << itr.weight << "\t";
         }
-        std::cout << "|";
+        std::cout << "]";
         std::cout << std::endl;
     }
     std::cout <<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" << std::endl;

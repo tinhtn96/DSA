@@ -1,6 +1,6 @@
 PROJECT_ROOT = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
-OBJS =  main.o graph.o
+OBJS =  main.o graph.o dijkstra.o
 CPPFLAGS = -Wall -g -std=c++11
 CXX=g++
 
